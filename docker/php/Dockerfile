@@ -5,12 +5,13 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo_mysql mbstring zip exif pcntl
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
 
 WORKDIR /var/www
 
-RUN mkdir -p /var/www/storage /var/www/bootstrap/cache && \
-    chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache && \
-    chmod -R 775 /var/www/storage /var/www/bootstrap/cache
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+ENTRYPOINT ["entrypoint.sh"]
 
 EXPOSE 9000
 CMD ["php-fpm"]

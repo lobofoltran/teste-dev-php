@@ -15,6 +15,14 @@ Uma API RESTful desenvolvida em **Laravel 12** para gerenciamento de fornecedore
 
 ## Subindo o Ambiente de Desenvolvimento
 
+### Criar cópia de .env.example para .env
+
+```bash
+cp .env.example .env
+```
+
+### Subir e buildar container
+
 ```bash
 docker compose up -d --build
 ```
