@@ -27,12 +27,6 @@ cp .env.example .env
 docker compose up -d --build
 ```
 
-### Gerar chave da aplicação
-
-```bash
-docker exec -it laravel-app php artisan key:generate
-```
-
 ### Rodar Migrations
 
 ```bash
