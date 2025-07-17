@@ -1,0 +1,974 @@
+{
+	"info": {
+		"_postman_id": "9fefe357-5507-4670-b3b8-b2fb1faf0130",
+		"name": "teste-dev-php",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23416683"
+	},
+	"item": [
+		{
+			"name": "Get all Suppliers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/suppliers?per_page=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"suppliers"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Gustavo",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "per_page",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers?per_page=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Gustavo",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:45:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 4,\n            \"name\": \"teste123\",\n            \"document\": \"13180902965\",\n            \"email\": \"contato@acme.com\",\n            \"phone\": \"41999999999\",\n            \"address\": \"Rua dos Fornecedores, 123\",\n            \"created_at\": \"2025-07-17T01:44:47.000000Z\",\n            \"updated_at\": \"2025-07-17T01:44:47.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"teste123\",\n            \"document\": \"12345678000110\",\n            \"email\": \"contato@acme.com\",\n            \"phone\": \"41999999999\",\n            \"address\": \"Rua dos Fornecedores, 123\",\n            \"created_at\": \"2025-07-17T01:29:52.000000Z\",\n            \"updated_at\": \"2025-07-17T01:29:52.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"teste123\",\n            \"document\": \"12345678000190\",\n            \"email\": \"contato@acme.com\",\n            \"phone\": \"41999999999\",\n            \"address\": \"Rua dos Fornecedores, 123\",\n            \"created_at\": \"2025-07-17T01:26:16.000000Z\",\n            \"updated_at\": \"2025-07-17T01:26:16.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8000/api/v1/suppliers?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:8000/api/v1/suppliers?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/v1/suppliers?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:8000/api/v1/suppliers\",\n    \"per_page\": 20,\n    \"prev_page_url\": null,\n    \"to\": 3,\n    \"total\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "Get an Supplier",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TESTE_DEV_PHP_HOST}}/api/v1/suppliers/13",
+					"host": [
+						"{{TESTE_DEV_PHP_HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"suppliers",
+						"13"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:46:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"teste123\",\n    \"document\": \"12345678000190\",\n    \"email\": \"contato@acme.com\",\n    \"phone\": \"41999999999\",\n    \"address\": \"Rua dos Fornecedores, 123\",\n    \"created_at\": \"2025-07-17T01:26:16.000000Z\",\n    \"updated_at\": \"2025-07-17T01:26:16.000000Z\"\n}"
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers",
+								"2"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:48:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Record not found.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create an Supplier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"teste123\",\r\n  \"document\": \"61.402.526/0001-92\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{TESTE_DEV_PHP_HOST}}/api/v1/suppliers",
+					"host": [
+						"{{TESTE_DEV_PHP_HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"suppliers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"teste123\",\r\n  \"document\": \"13180902965\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:44:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"teste123\",\n    \"document\": \"13180902965\",\n    \"email\": \"contato@acme.com\",\n    \"phone\": \"41999999999\",\n    \"address\": \"Rua dos Fornecedores, 123\",\n    \"updated_at\": \"2025-07-17T01:44:47.000000Z\",\n    \"created_at\": \"2025-07-17T01:44:47.000000Z\",\n    \"id\": 4\n}"
+				},
+				{
+					"name": "Invalid CPF",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"teste123\",\r\n  \"document\": \"13180902964\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:48:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Validation failed.\",\n    \"errors\": {\n        \"document\": [\n            \"The document must be a valid CPF.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Invalid CNPJ",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"teste123\",\r\n  \"document\": \"13180902961000\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:48:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Validation failed.\",\n    \"errors\": {\n        \"document\": [\n            \"The document must be a valid CNPJ.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Malformed Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"teste123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:49:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Validation failed.\",\n    \"errors\": {\n        \"document\": [\n            \"The document field is required.\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update an Supplier",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Teste\",\r\n  \"document\": \"131809029651\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{TESTE_DEV_PHP_HOST}}/api/v1/suppliers/4",
+					"host": [
+						"{{TESTE_DEV_PHP_HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"suppliers",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Teste\",\r\n  \"document\": \"12345678000194\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:29:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Teste\",\n    \"document\": \"12345678000194\",\n    \"email\": \"contato@acme.com\",\n    \"phone\": \"41999999999\",\n    \"address\": \"Rua dos Fornecedores, 123\",\n    \"created_at\": \"2025-07-17T01:05:24.000000Z\",\n    \"updated_at\": \"2025-07-17T01:29:13.000000Z\"\n}"
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Teste\",\r\n  \"document\": \"12345678000190\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:47:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Record not found.\"\n}"
+				},
+				{
+					"name": "Invalid CPF/CNPJ",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Teste\",\r\n  \"document\": \"131809029651\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers",
+								"4"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:50:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Validation failed.\",\n    \"errors\": {\n        \"document\": [\n            \"The document must be a valid CPF or CNPJ.\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete an Supplier",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Teste\",\r\n  \"document\": \"12345678000194\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{TESTE_DEV_PHP_HOST}}/api/v1/suppliers/12",
+					"host": [
+						"{{TESTE_DEV_PHP_HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"suppliers",
+						"12"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Teste\",\r\n  \"document\": \"12345678000194\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:46:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Supplier deleted successfully.\"\n}"
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Teste\",\r\n  \"document\": \"12345678000194\",\r\n  \"email\": \"contato@acme.com\",\r\n  \"phone\": \"41999999999\",\r\n  \"address\": \"Rua dos Fornecedores, 123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/suppliers/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"suppliers",
+								"2"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Jul 2025 01:46:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Record not found.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Brasil API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://brasilapi.com.br/api/cnpj/v1/12412685000162",
+					"protocol": "https",
+					"host": [
+						"brasilapi",
+						"com",
+						"br"
+					],
+					"path": [
+						"api",
+						"cnpj",
+						"v1",
+						"12412685000162"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TESTE_DEV_PHP_HOST",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
