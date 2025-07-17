@@ -1,54 +1,65 @@
-## Teste para Desenvolvedor PHP/Laravel
+# API de Fornecedores
 
-Bem-vindo ao teste de desenvolvimento para a posição de Desenvolvedor PHP/Laravel. 
+Uma API RESTful desenvolvida em **Laravel 12** para gerenciamento de fornecedores com integração à [BrasilAPI](https://brasilapi.com.br/) para consulta de CNPJs no momento do cadastro.
 
-O objetivo deste teste é desenvolver uma API Rest para o cadastro de fornecedores, permitindo a busca por CNPJ ou CPF, utilizando Laravel no backend.
+## Funcionalidades
 
-## Descrição do Projeto
+- CRUD de Fornecedores
+- Validação de CPF/CNPJ
+- Busca de dados de CNPJ via BrasilAPI
+- Cache de dados do CNPJ para evitar múltiplas requisições
+- Testes automatizados com PestPHP
+- Suporte a ambiente de desenvolvimento dockerizado
 
-### Backend (API Laravel):
+---
 
-#### CRUD de Fornecedores:
-- **Criar Fornecedor:**
-  - Permita o cadastro de fornecedores usando CNPJ ou CPF, incluindo informações como nome/nome da empresa, contato, endereço, etc.
-  - Valide a integridade e o formato dos dados, como o formato correto de CNPJ/CPF e a obrigatoriedade de campos.
+## Subindo o Ambiente de Desenvolvimento
 
-- **Editar Fornecedor:**
-  - Facilite a atualização das informações de fornecedores, mantendo a validação dos dados.
+```bash
+docker compose up -d --build
+```
 
-- **Excluir Fornecedor:**
-  - Possibilite a remoção segura de fornecedores.
+### Gerar chave da aplicação
 
-- **Listar Fornecedores:**
-  - Apresente uma lista paginada de fornecedores, com filtragem e ordenação.
+```bash
+docker exec -it laravel-app php artisan key:generate
+```
 
-#### Migrations:
-- Utilize migrations do Laravel para definir a estrutura do banco de dados, garantindo uma boa organização e facilidade de manutenção.
+### Rodar Migrations
 
-## Requisitos
+```bash
+docker exec -it laravel-app php artisan migrate
+```
 
-### Backend:
-- Implementar busca por CNPJ na [BrasilAPI](https://brasilapi.com.br/docs#tag/CNPJ/paths/~1cnpj~1v1~1{cnpj}/get) ou qualquer outro endpoint público.
+## Testes com PestPHP
 
-## Tecnologias a serem utilizadas
-- Framework Laravel (PHP) 9.x ou superior
-- MySQL ou Postgres
+Para rodar os testes automatizados:
 
-## Critérios de Avaliação
-- Adesão aos requisitos funcionais e técnicos.
-- Qualidade do código, incluindo organização, padrões de desenvolvimento e segurança.
-- Documentação do projeto, incluindo um README detalhado com instruções de instalação e operação.
+```bash
+docker exec -it laravel-app php artisan test
+```
 
-## Bônus
-- Implementação de Repository Pattern.
-- Implementação de testes automatizados.
-- Dockerização do ambiente de desenvolvimento.
-- Implementação de cache para otimizar o desempenho.
+---
 
-## Entrega
-- Para iniciar o teste, faça um fork deste repositório; Se você apenas clonar o repositório não vai conseguir fazer push.
-- Crie uma branch com o nome que desejar;
-- Altere o arquivo README.md com as informações necessárias para executar o seu teste (comandos, migrations, seeds, etc);
-- Depois de finalizado, envie-nos o pull request;
+## Coleção do Postman
 
+Visando facilitar os testes manuais da API, foi criada uma coleção do Postman.
 
+> `Importe o arquivo teste-dev-php.postman_collection.json no Postman para ter acesso aos endpoints prontos para uso.`
+
+Endpoints incluídos:
+
+- `GET /api/v1/suppliers` – Listagem de fornecedores
+- `GET /api/v1/suppliers/{id}` – Visualização individual
+- `POST /api/v1/suppliers` – Criação de fornecedor
+- `PUT /api/v1/suppliers/{id}` – Atualização de dados
+- `DELETE /api/v1/suppliers/{id}` – Exclusão
+
+---
+
+Desenvolvido por **Gustavo Lobo** - [LinkedIn](https://www.linkedin.com/in/gustavo-lobo)
+Atualmente desenvolvedor Java (Spring Boot) e React (Next.js).
+
+---
+
+> Inicialmente considerei utilizar o `Inertia` + `Vue` no projeto para o front-end. Porém, revisei e era solicitado a apenas a API. Portanto não dei continuidade.
